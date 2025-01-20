@@ -21,3 +21,27 @@ Clone this repository or download the source code to your local machine. Navigat
 
 ```bash
 pip install -r requirements.txt
+
+
+How to Use
+Start the Application: Launch the Streamlit application by running the command:
+
+streamlit run <path_to_script.py>
+Replace <path_to_script.py> with the path to the script file.
+
+Enter Your Google API Key: Securely enter your Google API key when prompted. This key enables the application to access Google's Generative AI models.
+
+Upload PDF Documents: You can upload one or multiple PDF documents. The application will analyze the content of these documents to respond to queries.
+
+Ask Questions: Once your documents are processed, you can ask any question related to the content of your uploaded documents.
+
+Technical Overview
+PDF Processing: Utilizes PyPDF2 for extracting text from PDF documents.
+Text Chunking: Employs the RecursiveCharacterTextSplitter from LangChain for dividing the extracted text into manageable chunks.
+Vector Store Creation: Uses FAISS for creating a searchable vector store from text chunks.
+Answer Generation: Leverages ChatGoogleGenerativeAI from LangChain for generating answers to user queries using the context provided by the uploaded documents.
+Support
+For issues, questions, or contributions, please refer to the GitHub repository issues section or submit a pull request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
